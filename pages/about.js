@@ -5,10 +5,13 @@ import PostBody from "components/post-body";
 import TwoColumn from "components/two-column";
 import Image from "next/image";
 import eyecatch from 'images/about.jpg'
+import Head from "next/head";
+import Meta from "components/meta";
 
 export default function About() {
   return (
     <Container>
+      <Meta pageTitle=" アバウト"/>
       <Hero 
         title="About"
         subtitle="About development activities"
