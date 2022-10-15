@@ -1,17 +1,16 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Footer from 'components/footer'
-import Header from 'components/header'
+import Container from 'components/container'
 import Hero from 'components/hero'
-import styles from '../styles/Home.module.css'
-import Layout from 'components/layout'
+import Meta from 'components/meta'
 
 export default function Home() {
   return (
+    <Container>
+      <Meta />
       <Hero 
         title="CUBE"
         subtitle="アウトプットしていくサイト"
         imageOn
       />
+    </Container>
   )
 }
