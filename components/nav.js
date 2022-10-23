@@ -9,23 +9,41 @@ export default function Nav() {
     setNavIsOpen((prev) => !prev)
   }
 
+  const closeNav = () => {
+    setNavIsOpen(false)
+  }
+
   return (
     <nav className={navIsOpen ? styles.open : styles.close}>
-      <button className={styles.btn}>MENU</button>
+      {navIsOpen && (
+        <style jsx global>{`
+          @media (max-width: 767px) {
+            body {
+              overflow: hidden;
+              position: fixed;
+              width: 100%;
+            }
+          }
+        `}</style>
+      )}
+      <button className={styles.btn} onClick={toggleNav}>
+        <span className={styles.bar}></span>
+        <span className="sr-only">MENU</span>
+      </button>
       <ul className={styles.list}>
         <li>
           <Link href="/">
-            <a>Home</a>
+            <a onClick={closeNav}>Home</a>
           </Link>
         </li>
         <li>
           <Link href="/about">
-            <a>About</a>
+            <a onClick={closeNav}>About</a>
           </Link>
         </li>
         <li>
           <Link href="/blog">
-            <a>Blog</a>
+            <a onClick={closeNav}>Blog</a>
           </Link>
         </li>
       </ul>

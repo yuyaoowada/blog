@@ -6,7 +6,7 @@ export default function Posts({ posts }) {
   return (
     <div className={styles.gridContainer}>
       {posts.map(({ title, slug, eyecatch }) => (
-        <article className={style.post} key={slug}>
+        <article className={posts.post} key={slug}>
           <Link href={`/blog/${slug}`}>
             <a>
               <figure>

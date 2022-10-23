@@ -19,6 +19,9 @@ export default function Home({ posts }) {
 }
 
 export async function getStaticProps() {
+  const url =
+    'https://images.microcms-assets.io/assets/a1ca6853671149889827a090b73896cd/1b90cf05ca074e8c96d06964d69e68b5/about.jpg'
+
   const posts = await getAllPosts(4)
 
   for (const post of posts) {

@@ -2,6 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
+    loader: 'ligix',
+    path: '',
     domains: ['images.microcms-assets.io'],
   },
 }
